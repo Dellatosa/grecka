@@ -33,6 +33,6 @@
     "maximum": "10"
   },
   "url": "https://github.com/Dellatosa/Grecka",
-  "manifest": "https://raw.githubusercontent.com/Dellatosa/Grecka/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/Dellatosa/grecka/master/system.json",
   "download": "https://github.com/Dellatosa/Grecka/archive/refs/tags/v0.0.1.zip"
 }
