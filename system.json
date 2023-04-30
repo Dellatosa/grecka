@@ -1,0 +1,38 @@
+{
+  "id": "grecka",
+  "title": "Grecka JDR",
+  "description": "Systeme Grecka JDR pour Foundry",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Dellatosa",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "module/grecka.js"
+  ],
+  "styles": [
+    "css/grecka.css"
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Francais",
+      "path": "lang/fr.json",
+      "flags": {}
+    }
+  ],
+  "gridDistance": 1.5,
+  "gridUnits": "m",
+  "initiative": "1d10",
+  "primaryTokenAttribute": "caracSecondaires.pdv",
+  "compatibility": {
+    "minimum": "10.283",
+    "verified": "10.291",
+    "maximum": "10"
+  },
+  "url": "https://github.com/Dellatosa/Grecka",
+  "manifest": "https://raw.githubusercontent.com/Dellatosa/Grecka/main/system.json",
+  "download": "https://github.com/Dellatosa/Grecka/archive/refs/tags/v0.0.1.zip"
+}

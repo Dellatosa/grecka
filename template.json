@@ -1,0 +1,74 @@
+{
+    "Actor": {
+        "types": ["personnage"],
+        "templates": {
+            "information": {
+                "prenom": "",
+                "age": "",
+                "sexe": "",
+                "taille": 0,
+                "agence": "",
+                "description": ""
+            },
+            "capacites": {
+                "physique": {
+                    "value": 0,
+                    "label": "Physique",
+                    "max": 6
+                },
+                "mental": {
+                    "value": 0,
+                    "label": "Mental",
+                    "max": 6
+                },
+                "conscience": {
+                    "value": 0,
+                    "label": "Conscience",
+                    "max": 6
+                }
+            },
+            "points": {
+                "heros": {
+                    "value": 0,
+                    "max": 3
+                },
+                "sante": {
+                    "value": 0,
+                    "max": 9
+                },
+                "preuve": {
+                    "value": 0,
+                    "max": 3
+                },
+                "equipe": {
+                    "value": 0,
+                    "max": 2
+                },
+                "drame": {
+                    "value": 0,
+                    "max": 3
+                },
+                "etat": {
+                    "ko": false,
+                    "trauma": false,
+                    "mort": false
+                }
+            }
+        },
+        "personnage": {
+            "templates": [ "information", "capacites", "points" ]
+        }
+    },
+    "Item": {
+        "types": ["archetype", "expertise"],
+        "archetype": {
+            "description": "",
+            "rang": 0,
+            "estSpecialise" : false,
+            "specialisations": []
+        },
+        "expertise": {
+            "description": ""
+        }
+    }
+}

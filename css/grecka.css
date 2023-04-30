@@ -1,0 +1,53 @@
+/*.window-app.grecka .window-content {
+    
+}*/
+.sheet.grecka header.sheet-header .entete-grid {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr 3fr;
+}
+.sheet.grecka header.sheet-header .nom-pj {
+  grid-column: 1 / 4;
+  font-size: 3em;
+  padding-bottom: 3px;
+}
+.sheet.grecka header.sheet-header .nom-pj input {
+  height: auto;
+}
+.sheet.grecka header.sheet-header input {
+  padding: 2px 3px;
+}
+.sheet.grecka header.sheet-header label {
+  padding: 5px 3px;
+}
+.sheet.grecka .sheet-fixed-content .item {
+  font-size: 1.2em;
+  color: #a27855;
+}
+.sheet.grecka .sheet-body .onglet-caracs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sheet.grecka .sheet-body .caracs-grid {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+}
+.sheet.grecka .sheet-body .caracs-grid .titre-caracs {
+  font-size: 1.5em;
+  color: #a27855;
+  grid-column: 1 / 3;
+}
+.sheet.grecka .sheet-body .caracs-grid .archetype-rang,
+.sheet.grecka .sheet-body .caracs-grid .capacite-rang {
+  text-align: center;
+}
+.sheet.grecka .sheet-body .caracs-grid .expertise-item {
+  grid-column: 1 / 3;
+}
+.sheet.grecka .sheet-body .titre-tab {
+  text-align: center;
+  font-size: 1.5em;
+  color: #a27855;
+}
+.sheet.grecka .sheet-body .editor {
+  min-height: 200px;
+}
