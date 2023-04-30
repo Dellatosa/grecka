@@ -1,5 +1,6 @@
 import { Grecka } from "./config.js";
 //import { registerSystemSettings } from "./settings.js";
+import registerHandlebarsHelpers from "./common/helpers.js"
 import GreckaActorSheet from "./sheets/GreckaActorSheet.js";
 import GreckaActor from "./GreckaActor.js";
 import GreckaItemSheet from "./sheets/GreckaItemSheet.js";
@@ -52,11 +53,8 @@ Hooks.once("init", function(){
     
     //preloadHandlebarsTemplates();
 
-    /*
-    Handlebars.registerHelper("configVal", function(liste, val) {
-        return Grecka[liste][val];
-    });
-    */
+    // Register Handlebars Helpers
+	registerHandlebarsHelpers();
 });
 
 //Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));

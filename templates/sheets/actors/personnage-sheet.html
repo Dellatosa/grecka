@@ -4,10 +4,10 @@
             <div class="nom-pj"><input name="name" type="text" value="{{actor.name}}" placeholder="Nom"/></div>
             <label>Conseiller de l'Assemblée Supérieure Greckale</label>
             <label>Agence :</label>
-            <input name="agence" type="text" value="{{actor.agence}}" placeholder="Agence"/>
+            <input name="system.agence" type="text" value="{{data.system.agence}}" placeholder="Agence"/>
             <label>Agent spéciale du Bureau-9</label>
             <label>Spécialisation :</label>
-            <input name="specialisation" type="text" value="{{actor.specialisation}}" placeholder="Spécialisation"/>
+            <input name="system.specialisation" type="text" value="{{data.system.specialisation}}" placeholder="Spécialisation"/>
         </div>
     </header>
     <div class="sheet-fixed-content">
@@ -39,10 +39,20 @@
                             <div class="expertise-item expertise-options" data-item-id="{{expertise._id}}">{{expertise.name}}</div>
                         {{/each}}
                     </div>
-                    <div class="data">
-                        <input type="checkbox" name="system.etat.ko" {{checked data.system.etat.ko}}/><label>KO (-1) </label>
-                        <input type="checkbox" name="system.etat.trauma" {{checked data.system.etat.blesse}}/><label>Trauma (1) </label>
-                        <input type="checkbox" name="system.etat.mort" {{checked data.system.etat.ko}}/><label>Mort (0) </label>
+                    <div class="points">
+                        <div class="titre-etats">Points d'états</div>
+                        <div> </div>
+                        <div class="titre-drame">Points de Drame</div>
+                        <div class="etats">
+                            <input type="checkbox" name="system.etat.ko" {{checked data.system.etat.ko}}/><label>KO (-1) </label>
+                            <input type="checkbox" name="system.etat.trauma" {{checked data.system.etat.trauma}}/><label>Trauma (1) </label>
+                            <input type="checkbox" name="system.etat.mort" {{checked data.system.etat.mort}}/><label>Mort (0) </label>
+                        </div>
+                        <div class="drame">
+                            {{#times data.system.drame.sysMax}}
+                                <a class="case-drame" title="{{@index}}" data-index="{{@index}}"><i class="fa-regular fa-square"></i></a>
+                            {{/times}}
+                        </div>
                     </div>
                 </div>
                 <div>

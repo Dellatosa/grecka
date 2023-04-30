@@ -43,6 +43,25 @@
 .sheet.grecka .sheet-body .caracs-grid .expertise-item {
   grid-column: 1 / 3;
 }
+.sheet.grecka .sheet-body .points {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.sheet.grecka .sheet-body .points .titre-etats,
+.sheet.grecka .sheet-body .points .titre-drame {
+  font-size: 1.2em;
+  color: #a27855;
+}
+.sheet.grecka .sheet-body .points .etats {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sheet.grecka .sheet-body .points .drame {
+  font-size: 1.3em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .sheet.grecka .sheet-body .titre-tab {
   text-align: center;
   font-size: 1.5em;
