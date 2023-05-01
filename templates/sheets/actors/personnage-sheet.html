@@ -28,11 +28,11 @@
                             <div class="archetype-rang">{{archetype.system.rang}}</div>
                         {{/each}}
                         <label class="titre-caracs">CAPACITES INNEES</label>
-                        <div>{{data.system.physique.label}}</div>
+                        <div class="capacite">{{data.system.physique.label}}</div>
                         <input class="capacite-rang" name="system.physique.value" type="number" value="{{data.system.physique.value}}"/>
-                        <div>{{data.system.mental.label}}</div>
+                        <div class="capacite">{{data.system.mental.label}}</div>
                         <input class="capacite-rang" name="system.mental.value" type="number" value="{{data.system.mental.value}}"/>
-                        <div>{{data.system.conscience.label}}</div>
+                        <div class="capacite">{{data.system.conscience.label}}</div>
                         <input class="capacite-rang" name="system.conscience.value" type="number" value="{{data.system.conscience.value}}"/>
                         <label class="titre-caracs">EXPERTISES</label>
                         {{#each expertises as |expertise id|}}
@@ -44,13 +44,31 @@
                         <div> </div>
                         <div class="titre-drame">Points de Drame</div>
                         <div class="etats">
-                            <input type="checkbox" name="system.etat.ko" {{checked data.system.etat.ko}}/><label>KO (-1) </label>
-                            <input type="checkbox" name="system.etat.trauma" {{checked data.system.etat.trauma}}/><label>Trauma (1) </label>
-                            <input type="checkbox" name="system.etat.mort" {{checked data.system.etat.mort}}/><label>Mort (0) </label>
+                            {{#if data.system.etat.ko}}
+                                <div class="case-etat uncheck-ko"><a title="KO"><i class="fa-regular fa-square-check"></i></a></div>
+                            {{else}}
+                                <div class="case-etat check-ko"><a title="KO"><i class="fa-regular fa-square"></i></a></div>
+                            {{/if}}
+                            <label>KO (-1) </label>
+
+                            {{#if data.system.etat.trauma}}
+                                <div class="case-etat uncheck-trauma"><a title="Trauma"><i class="fa-regular fa-square-check"></i></a></div>
+                            {{else}}
+                                <div class="case-etat check-trauma"><a title="Trauma"><i class="fa-regular fa-square"></i></a></div>
+                            {{/if}}
+                            <label>Trauma (1) </label>
+
+                            {{#if data.system.etat.mort}}
+                                <div class="case-etat uncheck-mort"><a title="Mort"><i class="fa-regular fa-square-check"></i></a></div>
+                            {{else}}
+                                <div class="case-etat check-mort"><a title="Mort"><i class="fa-regular fa-square"></i></a></div>
+                            {{/if}}
+                            <label>Mort (0) </label>
                         </div>
                         <div class="drame">
                             {{#times data.system.drame.sysMax}}
-                                <a class="case-drame" title="{{@index}}" data-index="{{@index}}"><i class="fa-regular fa-square"></i></a>
+                                <a class="case-drame" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.drame.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
+                                <!--<i class="fa-regular fa-square-check"></i><i class="fa-solid fa-square"></i>-->
                             {{/times}}
                         </div>
                     </div>

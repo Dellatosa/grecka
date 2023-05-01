@@ -52,6 +52,27 @@ export default class GreckaActorSheet extends ActorSheet {
             new ContextMenu(html, ".archetype-options", this.editContextMenu);
             new ContextMenu(html, ".expertise-options", this.editContextMenu);
 
+            // Cocher KO
+            html.find('.check-ko').click(this._onCheckKO.bind(this));
+
+            // Décocher KO
+            html.find('.uncheck-ko').click(this._onUncheckKO.bind(this));
+
+            // Cocher Trauma
+            html.find('.check-trauma').click(this._onCheckTrauma.bind(this));
+
+            // Décocher Trauma
+            html.find('.uncheck-trauma').click(this._onUncheckTrauma.bind(this));
+
+            // Cocher Mort
+            html.find('.check-mort').click(this._onCheckMort.bind(this));
+
+            // Décocher Mort
+            html.find('.uncheck-mort').click(this._onUncheckMort.bind(this));
+
+            // Cocher une case de Drame
+            html.find('.case-drame').click(this._onCocherCaseDrame.bind(this));
+
             // Jet de caractéristique
             //html.find('.roll-carac').click(this._onJetCaracteristique.bind(this));
 
@@ -93,6 +114,57 @@ export default class GreckaActorSheet extends ActorSheet {
         }
     ];
     
+    _onCheckKO(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        
+        this.actor.update({"system.etat.ko": true});
+    }
+
+    _onUncheckKO(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        
+        this.actor.update({"system.etat.ko": false});
+    }
+
+    _onCheckTrauma(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        
+        this.actor.update({"system.etat.trauma": true});
+    }
+
+    _onUncheckTrauma(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        
+        this.actor.update({"system.etat.trauma": false});
+    }
+
+    _onCheckMort(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        
+        this.actor.update({"system.etat.mort": true});
+    }
+
+    _onUncheckMort(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        
+        this.actor.update({"system.etat.mort": false});
+    }
+
+    _onCocherCaseDrame(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+
+        let indexDrame = element.dataset.index;
+        let drameVal = this.actor.system.drame.value != indexDrame ? indexDrame : indexDrame - 1;
+
+        this.actor.update({"system.drame.value": drameVal});
+    }
 
     /*
     _onJetCaracteristique(event) {
