@@ -40,7 +40,29 @@
                         {{/each}}
                     </div>
                     <div class="points">
-                        <div class="titre-etats">Points d'états</div>
+                        <div class="titre-sante">Points de Santé</div>
+                        <div> </div>
+                        <div class="titre-heros">Points de Héros</div>
+                        <div class="sante">
+                            {{#times data.system.sante.sysMax}}
+                                {{#if (gte data.system.sante.max @index)}}
+                                    <a class="case-sante" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.sante.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
+                                {{else}}
+                                <div class="case-sante-gray"><i class="fa-solid fa-square"></i></div>
+                                {{/if}}
+                            {{/times}}
+                        </div>
+                        <div> </div>
+                        <div class="heros">
+                            {{#times data.system.heros.sysMax}}
+                                {{#if (gte data.system.heros.max @index)}}
+                                    <a class="case-heros" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.heros.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
+                                {{else}}
+                                <div class="case-heros-gray"><i class="fa-solid fa-square"></i></div>
+                                {{/if}}
+                            {{/times}}
+                        </div>
+                        <div class="titre-etats">Points d'Etat</div>
                         <div> </div>
                         <div class="titre-drame">Points de Drame</div>
                         <div class="etats">
@@ -67,8 +89,33 @@
                         </div>
                         <div class="drame">
                             {{#times data.system.drame.sysMax}}
-                                <a class="case-drame" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.drame.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
-                                <!--<i class="fa-regular fa-square-check"></i><i class="fa-solid fa-square"></i>-->
+                                {{#if (gte data.system.drame.max @index)}}
+                                    <a class="case-drame" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.drame.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
+                                {{else}}
+                                    <div class="case-drame-gray"><i class="fa-solid fa-square"></i></div>
+                                {{/if}}
+                            {{/times}}
+                        </div>
+                        <div class="titre-preuves">Points de Preuves</div>
+                        <div> </div>
+                        <div class="titre-equipes">Points d'Equipes</div>
+                        <div class="preuves">
+                            {{#times data.system.preuve.sysMax}}
+                                {{#if (gte data.system.preuve.max @index)}}
+                                    <a class="case-preuves" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.preuve.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
+                                {{else}}
+                                    <div class="case-preuves-gray"><i class="fa-solid fa-square"></i></div>
+                                {{/if}}
+                            {{/times}}
+                        </div>
+                        <div> </div>
+                        <div class="equipes">
+                            {{#times data.system.equipe.sysMax}}
+                                {{#if (gte data.system.equipe.max @index)}}
+                                    <a class="case-equipes" title="{{@index}}" data-index="{{@index}}">{{#if (gte data.system.equipe.value @index)}}<i class="fa-regular fa-square-check"></i>{{else}}<i class="fa-regular fa-square"></i>{{/if}}</a>
+                                {{else}}
+                                    <div class="case-equipes-gray"><i class="fa-solid fa-square"></i></div>
+                                {{/if}}
                             {{/times}}
                         </div>
                     </div>

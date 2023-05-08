@@ -39,7 +39,7 @@
 .sheet.grecka .sheet-body .caracs-grid .capacite,
 .sheet.grecka .sheet-body .caracs-grid .archetype-item,
 .sheet.grecka .sheet-body .caracs-grid .expertise-item {
-  padding: 3px;
+  padding: 5px 3px;
 }
 .sheet.grecka .sheet-body .caracs-grid .archetype-rang,
 .sheet.grecka .sheet-body .caracs-grid .capacite-rang {
@@ -51,10 +51,14 @@
 }
 .sheet.grecka .sheet-body .points {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
 }
 .sheet.grecka .sheet-body .points .titre-etats,
-.sheet.grecka .sheet-body .points .titre-drame {
+.sheet.grecka .sheet-body .points .titre-drame,
+.sheet.grecka .sheet-body .points .titre-sante,
+.sheet.grecka .sheet-body .points .titre-heros,
+.sheet.grecka .sheet-body .points .titre-preuves,
+.sheet.grecka .sheet-body .points .titre-equipes {
   text-align: center;
   font-size: 1.2em;
   color: #a27855;
@@ -72,10 +76,51 @@
   margin-top: 2px;
 }
 .sheet.grecka .sheet-body .points .drame {
-  font-size: 1.3em;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
+}
+.sheet.grecka .sheet-body .points .drame .case-drame,
+.sheet.grecka .sheet-body .points .drame .case-drame-gray {
+  font-size: 1.3em;
+  text-align: center;
+}
+.sheet.grecka .sheet-body .points .sante {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.sheet.grecka .sheet-body .points .sante .case-sante,
+.sheet.grecka .sheet-body .points .sante .case-sante-gray {
+  font-size: 1.3em;
+  text-align: center;
+}
+.sheet.grecka .sheet-body .points .heros {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.sheet.grecka .sheet-body .points .heros .case-heros,
+.sheet.grecka .sheet-body .points .heros .case-heros-gray {
+  font-size: 1.3em;
+  text-align: center;
+}
+.sheet.grecka .sheet-body .points .preuves {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.sheet.grecka .sheet-body .points .preuves .case-preuves,
+.sheet.grecka .sheet-body .points .preuves .case-preuves-gray {
+  font-size: 1.3em;
+  text-align: center;
+}
+.sheet.grecka .sheet-body .points .equipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sheet.grecka .sheet-body .points .equipes .case-equipes,
+.sheet.grecka .sheet-body .points .equipes .case-equipes-gray {
+  font-size: 1.3em;
+  text-align: center;
 }
 .sheet.grecka .sheet-body .titre-tab {
   text-align: center;

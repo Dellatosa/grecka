@@ -73,6 +73,18 @@ export default class GreckaActorSheet extends ActorSheet {
             // Cocher une case de Drame
             html.find('.case-drame').click(this._onCocherCaseDrame.bind(this));
 
+            // Cocher une case de Santé
+            html.find('.case-sante').click(this._onCocherCaseSante.bind(this));
+
+            // Cocher une case de Héros
+            html.find('.case-heros').click(this._onCocherCaseHeros.bind(this));
+
+            // Cocher une case de Preuves
+            html.find('.case-preuves').click(this._onCocherCasePreuves.bind(this));
+
+            // Cocher une case d'Equipes
+            html.find('.case-equipes').click(this._onCocherCaseEquipes.bind(this));
+
             // Jet de caractéristique
             //html.find('.roll-carac').click(this._onJetCaracteristique.bind(this));
 
@@ -164,6 +176,46 @@ export default class GreckaActorSheet extends ActorSheet {
         let drameVal = this.actor.system.drame.value != indexDrame ? indexDrame : indexDrame - 1;
 
         this.actor.update({"system.drame.value": drameVal});
+    }
+
+    _onCocherCaseSante(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+
+        let indexSante = element.dataset.index;
+        let santeVal = this.actor.system.sante.value != indexSante ? indexSante : indexSante - 1;
+
+        this.actor.update({"system.sante.value": santeVal});
+    }
+
+    _onCocherCaseHeros(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+
+        let indexHeros = element.dataset.index;
+        let herosVal = this.actor.system.heros.value != indexHeros ? indexHeros : indexHeros - 1;
+
+        this.actor.update({"system.heros.value": herosVal});
+    }
+
+    _onCocherCasePreuves(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+
+        let indexPreuves = element.dataset.index;
+        let preuvesVal = this.actor.system.preuve.value != indexPreuves ? indexPreuves : indexPreuves - 1;
+
+        this.actor.update({"system.preuve.value": preuvesVal});
+    }
+
+    _onCocherCaseEquipes(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+
+        let indexEquipes = element.dataset.index;
+        let equipesVal = this.actor.system.equipe.value != indexEquipes ? indexEquipes : indexEquipes - 1;
+
+        this.actor.update({"system.equipe.value": equipesVal});
     }
 
     /*

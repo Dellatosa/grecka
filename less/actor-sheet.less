@@ -54,7 +54,7 @@
         }
 
         .capacite, .archetype-item, .expertise-item {
-            padding: 3px;
+            padding: 5px 3px;
         }
 
         .archetype-rang, .capacite-rang {
@@ -69,9 +69,9 @@
 
     .points { 
         display: grid;  
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 0.5fr 1fr;
 
-        .titre-etats, .titre-drame {
+        .titre-etats, .titre-drame, .titre-sante, .titre-heros, .titre-preuves, .titre-equipes {
             text-align: center;
             font-size: 1.2em;
             color: #a27855;
@@ -93,11 +93,57 @@
         }
 
         .drame {
-            font-size: 1.3em;
             text-align: center;
 
             display: grid;  
             grid-template-columns: 1fr;
+
+            .case-drame, .case-drame-gray {
+                font-size: 1.3em;
+                text-align: center;    
+            }
+        }
+
+        .sante {
+            display: grid;  
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .case-sante, .case-sante-gray {
+                font-size: 1.3em;
+                text-align: center;    
+            }
+        }
+
+        .heros {
+            text-align: center;
+
+            display: grid;  
+            grid-template-columns: 1fr;
+
+            .case-heros, .case-heros-gray {
+                font-size: 1.3em;
+                text-align: center;    
+            }
+        }
+
+        .preuves {
+            display: grid;  
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .case-preuves, .case-preuves-gray {
+                font-size: 1.3em;
+                text-align: center;    
+            }
+        }
+
+        .equipes {
+            display: grid;  
+            grid-template-columns: 1fr 1fr;
+
+            .case-equipes, .case-equipes-gray {
+                font-size: 1.3em;
+                text-align: center;    
+            }
         }
     }
 
